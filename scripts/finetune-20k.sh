@@ -24,8 +24,8 @@ reverb_path_root=/content/drive/MyDrive/mp3d_reverb # https://huggingface.co/dat
 reverb_train_json=/content/drive/MyDrive/mp3d_reverb/train_reverberation.json
 reverb_val_json=/content/drive/MyDrive/mp3d_reverb/eval_reverberation.json
 
-output_dir=./outputs/finetune-20k
-log_dir=./outputs/finetune-20k/log
+output_dir=/content/drive/MyDrive/data_and_checkpoints/finetune-20k
+log_dir=/content/drive/MyDrive/data_and_checkpoints/finetune-20k/log
 
 mkdir -p $output_dir
 
