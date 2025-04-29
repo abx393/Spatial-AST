@@ -29,8 +29,24 @@ log_dir=/content/drive/MyDrive/data_and_checkpoints/finetune-20k/log
 
 mkdir -p $output_dir
 
-python -m torch.distributed.launch \
-    --nproc_per_node=1 --master_port=24432 --use_env main_finetune.py \
+#python -m torch.distributed.launch \
+#    --nproc_per_node=1 --master_port=24432 --use_env main_finetune.py \
+#    --log_dir $log_dir --output_dir $output_dir --finetune $ckpt \
+#    --model build_AST --dataset $dataset \
+#    --audio_path_root $audio_path_root \
+#    --audioset_train $audioset_train_json --audioset_eval $audioset_eval_json \
+#    --label_csv $audioset_label \
+#    --nb_classes 355 \
+#    --reverb_path_root $reverb_path_root --reverb_type $reverb_type \
+#    --reverb_train $reverb_train_json --reverb_val $reverb_val_json \
+#    --blr $blr --dist_eval --batch_size 64 --num_workers 4 \
+#    --roll_mag_aug --mixup 0.5 --audio_normalize \
+#    --mask_t_prob $mask_t_prob --mask_f_prob $mask_f_prob \
+#    --first_eval_ep 0 --epochs 50 --warmup_epochs 5 \
+#    --mask_2d 
+
+    
+python main_finetune.py \
     --log_dir $log_dir --output_dir $output_dir --finetune $ckpt \
     --model build_AST --dataset $dataset \
     --audio_path_root $audio_path_root \
@@ -44,4 +60,5 @@ python -m torch.distributed.launch \
     --mask_t_prob $mask_t_prob --mask_f_prob $mask_f_prob \
     --first_eval_ep 0 --epochs 50 --warmup_epochs 5 \
     --mask_2d 
+    
     
