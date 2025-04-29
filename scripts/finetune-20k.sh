@@ -8,7 +8,7 @@ mask_t_prob=0.25
 mask_f_prob=0.25
 
 # Download from https://drive.google.com/file/d/1ni_DV4dRf7GxM8k-Eirx71WP9Gg89wwu/view?usp=share_link
-ckpt=/path/to/audiomae/pretrained.pth
+ckpt=/content/drive/MyDrive/data_and_checkpoints/pretrained.pth
 
 # Sound source
 dataset=audioset
