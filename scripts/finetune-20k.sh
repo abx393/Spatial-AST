@@ -12,20 +12,20 @@ ckpt=/content/drive/MyDrive/data_and_checkpoints/pretrained.pth
 
 # Sound source
 dataset=audioset
-audio_path_root=/content/drive/MyDrive/data_and_checkpoints # https://huggingface.co/datasets/zhisheng01/SpatialAudio/tree/main/SpatialSoundQA/AudioSet
-audioset_label=/content/drive/MyDrive/data_and_checkpoints/metadata/class_labels_indices_subset.csv # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/class_labels_indices_subset.csv
-audioset_train_json=/content/drive/MyDrive/data_and_checkpoints/metadata/balanced.json # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/balanced.json
-audioset_train_weight=/content/drive/MyDrive/data_and_checkpoints/metadata/weights/balanced_weight.csv # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/weights/balanced_weight.csv
-audioset_eval_json=/content/drive/MyDrive/data_and_checkpoints/metadata/eval.json # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/eval.json
+audio_path_root=/content # https://huggingface.co/datasets/zhisheng01/SpatialAudio/tree/main/SpatialSoundQA/AudioSet
+audioset_label=/content/metadata/class_labels_indices_subset.csv # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/class_labels_indices_subset.csv
+audioset_train_json=/content/metadata/balanced.json # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/balanced.json
+audioset_train_weight=/content/metadata/weights/balanced_weight.csv # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/weights/balanced_weight.csv
+audioset_eval_json=/content/metadata/eval.json # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/AudioSet/metadata/eval.json
 
 # For reverberation data, please visit https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/mp3d_reverb.zip
 reverb_type=$1 # or mono
-reverb_path_root=/content/drive/MyDrive/mp3d_reverb # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/mp3d_reverb.zip
-reverb_train_json=/content/drive/MyDrive/mp3d_reverb/train_reverberation.json
-reverb_val_json=/content/drive/MyDrive/mp3d_reverb/eval_reverberation.json
+reverb_path_root=/content/mp3d_reverb # https://huggingface.co/datasets/zhisheng01/SpatialAudio/blob/main/SpatialSoundQA/mp3d_reverb.zip
+reverb_train_json=/content/mp3d_reverb/train_reverberation.json
+reverb_val_json=/content/mp3d_reverb/eval_reverberation.json
 
-output_dir=/content/drive/MyDrive/data_and_checkpoints/finetune-20k
-log_dir=/content/drive/MyDrive/data_and_checkpoints/finetune-20k/log
+output_dir=/content/finetune-20k
+log_dir=/content/finetune-20k/log
 
 mkdir -p $output_dir
 
