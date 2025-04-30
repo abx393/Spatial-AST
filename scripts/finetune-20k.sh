@@ -56,6 +56,7 @@ python main_finetune.py \
     --nb_classes 355 \
     --reverb_path_root $reverb_path_root --reverb_type $reverb_type \
     --reverb_train $reverb_train_json --reverb_val $reverb_val_json \
+    --resume /content/finetuned.pth \
     --blr $blr --dist_eval --batch_size 64 --num_workers 4 \
     --roll_mag_aug --mixup 0.5 --audio_normalize \
     --mask_t_prob $mask_t_prob --mask_f_prob $mask_f_prob \
