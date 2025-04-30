@@ -52,6 +52,7 @@ python main_finetune.py \
     --audio_path_root $audio_path_root \
     --audioset_train $audioset_train_json --audioset_eval $audioset_eval_json \
     --label_csv $audioset_label \
+    --min_lr 1e-4 \
     --nb_classes 355 \
     --reverb_path_root $reverb_path_root --reverb_type $reverb_type \
     --reverb_train $reverb_train_json --reverb_val $reverb_val_json \
