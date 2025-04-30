@@ -68,7 +68,8 @@ def train_one_epoch(
         loss4 = F.cross_entropy(outputs[3], elevation)
         
         # loss = loss1
-        loss = 1250 * loss1 + 1 * loss2 + 2 * (loss3 + loss4)
+        #loss = 1250 * loss1 + 1 * loss2 + 2 * (loss3 + loss4)
+        loss = 1 * loss2 + 2 * (loss3 + loss4)
             
         loss_value = loss.item()
 
