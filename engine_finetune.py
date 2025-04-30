@@ -60,7 +60,7 @@ def train_one_epoch(
         elevation = spaital_targets['elevation'].long().to(device, non_blocking=True)
 
         # with torch.cuda.amp.autocast():
-        outputs = model(waveforms, reverbs, mask_t_prob=args.mask_t_prob, mask_f_prob=args.mask_f_prob)
+        outputs = model(waveforms.cuda(), reverbs.cuda(), mask_t_prob=args.mask_t_prob, mask_f_prob=args.mask_f_prob)
         
         loss1 = criterion(outputs[0], targets)
         loss2 = F.cross_entropy(outputs[1], distance)
