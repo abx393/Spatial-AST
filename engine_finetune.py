@@ -131,7 +131,7 @@ def evaluate(data_loader, model, device, dist_eval=False):
         target = target.to(device, non_blocking=True)
         # compute output
 
-        output = model(waveforms, reverbs)
+        output = model(waveforms.cuda(), reverbs.cuda())
         # remark: 
         # 1. use concat_all_gather and --dist_eval for faster eval by distributed load over gpus
         # 2. otherwise comment concat_all_gather and remove --dist_eval one every gpu
